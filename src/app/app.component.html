@@ -1,0 +1,32 @@
+<h1 align="center">CURRENCY CONVERTOR</h1>
+<div style="text-align:center"> 
+<label for="convertor">SOURCE CURRENCY: </label>
+<select align="center" name="src" id="src" [(ngModel)]="name"><br>
+ <option *ngFor="let src1 of src" [ngValue]="src1">
+    {{src1}}
+  </option>
+</select>
+<br>
+<br>
+<label for="convertor">TARGET CURRENCY: </label>
+<select align="center" name="target" id="target" [(ngModel)]="name1"><br>
+  <option *ngFor="let target1 of src" [ngValue]="target1">
+     {{target1}}
+   </option>
+ </select>
+
+</div>
+<br>
+
+
+<div class ="result-container" align="center">
+  <label for="convertor">  AMOUNT: </label>
+  <input type  ="number" #number [(ngModel)]="num"/><br>
+
+  <br>
+<button (click)="sub(name, name1,num )">Submit</button>
+<br><br>
+</div>
+<h3 align="center">Output: {{res}}</h3>
+
+<router-outlet></router-outlet>
